@@ -1,0 +1,13 @@
+[Unit]
+Description=Init Service for Eagle Agent
+OnFailure=/home/pi/scripts/rpi_mongodb_service.sh restart
+After=multi-user.target
+
+[Service]
+Type=simple
+RemainAfterExit=yes
+ExecStart=/home/pi/scripts/rpi_mongodb_service.sh start
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
