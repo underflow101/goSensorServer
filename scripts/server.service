@@ -1,5 +1,5 @@
 [Unit]
-Description=Init Service for Eagle Agent
+Description=Init Service for goSensorServer
 OnFailure=/home/pi/scripts/rpi_server_service.sh restart
 After=multi-user.target
 
